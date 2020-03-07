@@ -6,7 +6,9 @@ namespace LegoMinifigures
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Lego Minifigures");
+            var astronaut = new Astronaut("Space Person", "Janitor");
+
+            astronaut.DoYourJob();
         }
     }
 }
