@@ -23,7 +23,7 @@ namespace LegoMinifigures
                 Shoes = ShoeType.FlipFlops
             };
 
-            var torso = new AstronautTorso
+            var atorso = new AstronautTorso
             {
                 NumberOfArms = 2,
                 ChiseledAbs = true,
@@ -31,12 +31,18 @@ namespace LegoMinifigures
                 HandType = HandType.Baby
 
             };
+            var btorso = new AstronautTorso
+            {
+                NumberOfArms = 2,
+                ChiseledAbs = true,
+                Shirted = true,
+                HandType = HandType.Baby
 
-            var astronaut = new Astronaut("Space Person", "Janitor", head, torso, legs);
-            var astronaut2 = new Astronaut("Space Lady", "Janitor", head, torso, legs);
-
+            };
+            var astronaut = new Astronaut("Space Person", "Janitor", head, atorso, legs);
+            var astronaut2 = new Astronaut("Space Lady", "Janitor", head, btorso, legs);
+            
             astronaut.DoYourJob();
-
             var casper = new Ghost("Casper", DateTime.Today) { Friendly = true };
 
             casper.Spook();

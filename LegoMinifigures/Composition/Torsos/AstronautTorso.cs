@@ -4,14 +4,12 @@ using System.Text;
 
 namespace LegoMinifigures.Composition.Torsos
 {
-    class AstronautTorso
+    class AstronautTorso : TorsoBase  // Creates "is a" relationship, similar to React "extends"
     {
         public int NumberOfArms { get; set; }
-        public bool ChiseledAbs { get; set; }
-        public bool Shirted { get; set; }
-        public HandType HandType { get; set; }
+        public override bool ChiseledAbs { get; set; }
 
-        public void Flex()
+        public override void Flex() // override says this is related to what the torso base said it should do
         {
             if (ChiseledAbs && !Shirted)
             {
@@ -28,14 +26,12 @@ namespace LegoMinifigures.Composition.Torsos
 
         }
 
+        public override void Breathe()
+        {
+            Console.WriteLine("Some other pattern of breathing....");
+        }
+
     }
 
-    enum HandType
-    {
-        Human,
-        Robot,
-        Baby,
-        Tentacles,
-        XBuster
-    }
+
 }

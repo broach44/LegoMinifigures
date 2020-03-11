@@ -4,7 +4,12 @@ using System.Text;
 
 namespace LegoMinifigures.Composition.Torsos
 {
-    class HandType
+    enum HandType
     {
+        Human,
+        Robot,
+        Baby,
+        Tentacles,
+        XBuster
     }
 }
